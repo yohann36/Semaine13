@@ -1,0 +1,51 @@
+html{
+    background-image: url("bgmoney.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+#credit{
+    float:left;
+    width:49%;
+}
+
+#debit{
+    float:right;
+    width:49%;
+}
+
+#balance{
+    clear:both;
+}
+
+#board{
+    clear:both;
+    background-color: rgba(255,255,255,0.4);
+}
+
+#panel{
+    text-align:center;
+}
+
+li{
+    list-style:none;
+}
+
+h1{
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Paprika', cursive;
+    text-align:center;
+    color:#1C2C66;
+    font-size:65px;
+    -moz-box-shadow: 10px 10px 20px 0px #656565;
+    -webkit-box-shadow: 10px 10px 20px 0px #656565;
+    -o-box-shadow: 10px 10px 20px 0px #656565;
+    box-shadow: 10px 10px 20px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=20);
+}
+
+div{
+    font-size:20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ANGULAR JS</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        
+    </head>
+    <body ng-app="Myapp">
+      
+      <h1>MON Q.C.M</h1>
+      <hr>
+      
+        <div ng-controller="GenderCtrl">
+          <form ng-submit= "act">
+            
+            <label class="qcm">Quelle est votre sexe?<br>
+                <span ng-repeat="gender in sex"><input type="radio"  ng-model="radio" name="sex">{{gender.content}}</span>
+            </label><br>
+            
+            <label class="qcm">Quelle est votre couleur de cheveux?<br>
+                <span ng-repeat="c in couleur"><input type="radio" ng-model="radio" name="couleur">{{c.content}}</span>
+            </label><br>
+            
+            <label class="qcm">Où habitez vous?<br>
+                <span ng-repeat="l in lieu"><input type="radio" ng-model="radio" name="lieu">{{l.content}}</span>
+            </label> 
+            
+              <br>
+              <hr>
+               <input type="submit" class="button" ng-click="act=addpoint" value="CALCULER">
+                <tt>{{points}}{{ute}}</tt>
+               <li ng-repeat="p in points">{{p.value}}</li>
+              
+             </form>
+        </div>
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+           <script type="text/javascript" src="script.js"></script>
+    </body>
+    
+</html>

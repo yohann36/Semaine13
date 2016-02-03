@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TENU DE COMPTE</title>
+        <link href='https://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        
+    </head>
+    <body ng-app="myApp">
+    <div>  
+        <h1>MY E-ACCOUNT</h1>
+        <hr>
+        <form ng-submit="act" ng-controller="compteCtrl">
+            <div id="panel">
+                
+                <input type="submit" class="button" ng-click="act=addMoney()"         style="display:{{effetm}}" value="CREDIT">
+                <input type="submit" class="button" ng-click="act=addMoneyLabel()"    style="display:{{effetlC}}" value="LABEL">
+                <input type="submit" class="button" ng-click="act=removeMoneyLabel()" style="display:{{effetlD}}" value="LABEL">
+                
+                <input type="text" ng-model="montant"  style="display:{{effetm}}" placeholder="Amount {{ute}}">
+                <input type="text" ng-model="libeller" style="display:{{effetl}}" placeholder="label">
+                
+                <input type="submit" class="button" ng-click="act=removeMoney()"  style="display:{{effetm}}" value="DEBIT">
+                
+            
+            </div>
+            <hr>
+                
+            <div id="board">   
+                <div id="credit">
+                    <h2>Crédit :</h2>
+                    
+                    <div ng-repeat="cre in credit">
+                        <li>{{cre.content}} : {{cre.amount}} {{ute}}</li>
+                    </div>
+                    
+                    <hr>
+                        <div>Total crédit : {{totalCredit}} {{ute}}</div>
+                    <hr>
+                </div>
+                
+                
+                <div id="debit">
+                    <h2>Débit :</h2>
+                    
+                    <div ng-repeat="deb in debit">
+                        <li>{{deb.content}} : {{deb.amount}} {{ute}}</li>
+                    </div>
+                    
+                    <hr>
+                        <div>Total débit : {{totalDebit}} {{ute}}</div>
+                    <hr>
+                </div>
+                
+                
+                <div id="balance">Balance : {{totalBilan}} {{ute}}</div>
+                <hr>
+                 
+        </div>
+        
+        </form>
+    </div>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+           <script type="text/javascript" src="script.js"></script>
+    </body>
+    
+</html>

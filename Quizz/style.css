@@ -1,0 +1,49 @@
+.animate-hide {
+  transition: all linear 0.5s;
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+.animate-hide.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.qcm{
+  display:block;
+  margin-top:10px;
+  text-align:center;
+  
+}
+
+h1{
+   display:block;
+  margin-top:10px;
+  text-align:center;
+  font-size:50px;
+}
+
+.button{
+  margin-top:50px;
+  margin:auto;
+  display:block;
+  width:80%;
+  border-radius:10px;
+  background-color:#2ecc71;
+  height:50px;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.pasla {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+} 
+
+.rien.result {
+  color: red;
+  font-size:3em;
+}
