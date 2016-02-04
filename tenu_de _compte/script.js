@@ -20,9 +20,11 @@ var app = angular.module("myApp", [])
             $scope.totalCredit =0;
             $scope.totalDebit  =0;
             
-            for(var i=0;i<$scope.credit.length||i<$scope.debit.length;i++) {
+            for(var i=0;i<$scope.credit.length;i++) {
                 $scope.totalCredit += $scope.credit[i].amount;
-                $scope.totalDebit  += $scope.debit[i].amount;
+            }
+            for(var c=0;c<$scope.debit.length;c++) {
+                $scope.totalDebit  += $scope.debit[c].amount;
             }
             $scope.totalBilan = $scope.totalCredit-$scope.totalDebit;
             

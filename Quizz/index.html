@@ -6,33 +6,30 @@
         <link rel="stylesheet" href="style.css" type="text/css" />
         
     </head>
-    <body ng-app="Myapp">
+    <body ng-app="myApp">
+        <hr><hr>
+        <h1>MY   ANGULAR   JS   Q.C.M</h1>
+        <hr><hr>
       
-      <h1>MON Q.C.M</h1>
-      <hr>
-      
-        <div ng-controller="GenderCtrl">
-          <form ng-submit= "act">
-            
-            <label class="qcm">Quelle est votre sexe?<br>
-                <span ng-repeat="gender in sex"><input type="radio"  ng-model="radio" name="sex">{{gender.content}}</span>
-            </label><br>
-            
-            <label class="qcm">Quelle est votre couleur de cheveux?<br>
-                <span ng-repeat="c in couleur"><input type="radio" ng-model="radio" name="couleur">{{c.content}}</span>
-            </label><br>
-            
-            <label class="qcm">Où habitez vous?<br>
-                <span ng-repeat="l in lieu"><input type="radio" ng-model="radio" name="lieu">{{l.content}}</span>
-            </label> 
-            
-              <br>
-              <hr>
-               <input type="submit" class="button" ng-click="act=addpoint" value="CALCULER">
-                <tt>{{points}}{{ute}}</tt>
-               <li ng-repeat="p in points">{{p.value}}</li>
-              
-             </form>
+        <div ng-controller="quizzCtrl">
+            <form ng-submit>
+                <div style="display:{{questionStyle}}">
+                    <div id="question" ng-model="question">{{quizz[index].question}}(Points : {{point}}/10)</div>
+                    
+                    <label  style='display:{{effetf}}'><input type='radio' class="p" ng-click="questionnaire()" ng-model='rep' value='rep1'>{{quizz[index].rep1}}</label>
+                    <label  style='display:{{effetf}}'><input type='radio' class="p" ng-click="questionnaire()" ng-model='rep' value='rep2'>{{quizz[index].rep2}}</label>
+                    <label  style='display:{{effet}}'><input type='radio'  class="p" ng-click="questionnaire()" ng-model='rep' value='rep3'>{{quizz[index].rep3}}</label>
+                    <label  style='display:{{effet}}'><input type='radio'  class="p" ng-click="questionnaire()" ng-model='rep' value='rep4'>{{quizz[index].rep4}}</label>
+                    
+                </div> 
+                <span style="display:{{startStyle}}">
+                    <input type="submit" class="start" ng-click="start()" value="START >>>>>" >
+                </span>
+                <div id="final" style="display:{{final}}">
+                    Points : {{point}}/10<hr><hr>
+                    {{msg}}
+                </div>
+            </form>
         </div>
 
             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>

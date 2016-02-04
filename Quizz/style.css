@@ -1,37 +1,23 @@
-.animate-hide {
-  transition: all linear 0.5s;
-  line-height: 20px;
-  opacity: 1;
-  padding: 10px;
-  border: 1px solid black;
-  background: white;
-}
-
-.animate-hide.ng-hide {
-  line-height: 0;
-  opacity: 0;
-  padding: 0 10px;
-}
-
-.qcm{
-  display:block;
-  margin-top:10px;
-  text-align:center;
-  
+html{
+    background-image: url("angular_img.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 h1{
-   display:block;
+  display:block;
   margin-top:10px;
   text-align:center;
-  font-size:50px;
+  font-size:60px;
+  font-weight:bold;
 }
 
 .button{
-  margin-top:50px;
-  margin:auto;
+  margin-top:30px;
+  float:right;
   display:block;
-  width:80%;
+  width:40%;
   border-radius:10px;
   background-color:#2ecc71;
   height:50px;
@@ -39,11 +25,51 @@ h1{
   font-weight:bold;
 }
 
-.pasla {
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-} 
+.start{
+  margin-top:10%;
+  margin-left:30%;
+  width:40%;
+  border-radius:10px;
+  background-color:#2ecc71;
+  height:100px;
+  font-size:50px;
+  font-weight:bold;
+}
 
-.rien.result {
-  color: red;
-  font-size:3em;
+#question{
+  font-size:40px;
+  font-weight:bold;
+  text-align:center;
+  padding-bottom:40px;
+}
+
+label{
+  clear:both;
+  cursor:pointer;
+  margin-top:20px;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  border:2px solid black;
+  border-radius:10px;
+  background-color:rgba(130,141,232,0.5);
+}
+
+
+label:hover{
+  background-color:rgba(130,141,232,0.8);
+  font-weight:normal;
+}
+
+
+.p{
+  display:none;
+}
+
+#final{
+  font-size:50px;
+  text-align:center;
+  font-weight:bold;
+  margin:20px;
+  color:#0C594A;
 }
